@@ -1,0 +1,11 @@
+﻿- Write a documment about the tool and requirements (DNS, IP, run as Administrator, close all applications which read rhevm database etc.)
+
+- Separate class Run into two different classes with methods for each operation
+
+- Verify return in the SQL functions
+  int rowsAffected = thisCommand.ExecuteNonQuery();
+  Console.WriteLine("Rows Updated = {0}", rowsAffected);
+
+- Try/Catch for File.Copy, File.Move.
+
+- review all code
