@@ -32,10 +32,11 @@ namespace rhevUP
             {
                 thisConnection.Open();
             }
-            catch
+            catch (Exception e)
             {
                 Console.WriteLine("Unable to connect to SQL Server!!");
                 Console.WriteLine("Are you using the correct SQL ServerName?");
+                Console.WriteLine("{0} Exception caught.", e);
                 Environment.Exit(-1);
             }
 
@@ -49,13 +50,14 @@ namespace rhevUP
             {
                 thisCommand.ExecuteNonQuery();
             }
-            catch
+            catch (Exception e)
             {
                 Console.WriteLine("Cannot proceed with backup rhevm database, please check the following:");
                 Console.WriteLine("* Are you using the correct SQL ServerName?");
                 Console.WriteLine("* Any problem/timeout with SQL Server?");
                 Console.WriteLine("* Make sure no application are using rhevm database at this moment");
                 Console.WriteLine("Example: SQL Server Management software, RHEV Configurator, etc.");
+                Console.WriteLine("{0} Exception caught.", e);
                 Environment.Exit(-1);
             }
 
@@ -72,13 +74,14 @@ namespace rhevUP
             {
                 thisCommand.ExecuteNonQuery();
             }
-            catch
+            catch (Exception e)
             {
                 Console.WriteLine("Cannot proceed with backup rhevm database, please check the following:");
                 Console.WriteLine("* Are you using the correct SQL ServerName?");
                 Console.WriteLine("* Any problem/timeout with SQL Server?");
                 Console.WriteLine("* Make sure no application are using rhevm database at this moment");
                 Console.WriteLine("Example: SQL Server Management software, RHEV Configurator, etc.");
+                Console.WriteLine("{0} Exception caught.", e);
                 Environment.Exit(-1);
             }
             thisConnection.Close();
@@ -99,10 +102,11 @@ namespace rhevUP
             {
                 thisConnection.Open();
             }
-            catch
+            catch (Exception e)
             {
                 Console.WriteLine("Unable to connect to SQL Server!!");
                 Console.WriteLine("Are you using the correct SQL ServerName?");
+                Console.WriteLine("{0} Exception caught.", e);
                 Environment.Exit(-1);
             }
 
@@ -122,10 +126,11 @@ namespace rhevUP
             {
                 thisCommand.ExecuteNonQuery();
             }
-            catch
+            catch (Exception e)
             {
                 Console.WriteLine("Cannot proceed with restore rhevm_history database, any problem/timeout with SQL Server?");
                 Console.WriteLine("tip: Make sure SQL Server Management software is closed.");
+                Console.WriteLine("{0} Exception caught.", e);
                 Environment.Exit(-1);
             }
         
@@ -143,10 +148,11 @@ namespace rhevUP
             {
                 thisCommand.ExecuteNonQuery();
             }
-            catch
+            catch (Exception e)
             {
                 Console.WriteLine("Cannot proceed with restore rhevm database, any problem/timeout with SQL Server?");
                 Console.WriteLine("tip: Make sure SQL Server Management software is closed.");
+                Console.WriteLine("{0} Exception caught.", e);
                 Environment.Exit(-1);
             }
             thisConnection.Close();
@@ -173,10 +179,11 @@ namespace rhevUP
             {
                 thisConnection.Open();
             }
-            catch
+            catch (Exception e)
             {
                 Console.WriteLine("Unable to connect to SQL Server!!");
                 Console.WriteLine("Are you using the correct SQL ServerName?");
+                Console.WriteLine("{0} Exception caught.", e);
                 Environment.Exit(-1);
             }
 
